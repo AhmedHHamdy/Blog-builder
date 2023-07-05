@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    
+    <title>Document</title>
+</head>
+    <body>
+        <main>
+            <div class="form-container">
+                <h1>Add A Blog:</h2>
+                <form action="/addblog" method="POST" enctype="multipart/form-data">
+                    <label for="tilte">Add a Title:</label>
+                    <input type="text" id="tilte" placeholder="Title" name="title">
+
+                    <label for="description">Add a Description:</label>
+                    <textarea name="description" id="description" cols="30" rows="10" placeholder="Add a Description"></textarea>
+
+                    <label for="thumbnail">Upload a thumbnail for the blog:</label>
+                    <input type="file" id="thumbnail" name="blogThumbnail" accept="image/png, image/jpg">
+                    <input type="submit">
+                </form>
+            </div>
+
+
+            <section>
+                <h2>All</h2>
+                <ul>
+                <% for(let i = 0; i < info.length; i++) {%>
+                    <li>
+                        <article>
+                            <!-- <img src="/images/<%= info[i].thumbnail %>" alt="Thumbnail" /> -->
+                            <div class="thumbnail-background" style="background: url('/images/<%= info[i].thumbnail %>') top no-repeat; width: 408px; height: 300px; background-size: cover;"></div>
+                            <h3><%= info[i].title %></h3>
+                            <p><%= info[i].desc %></p>
+                            <div>
+                                <span><%= info[i].likes %></span>
+                                <span class='fa fa-thumbs-up'></span>
+                                <span class='fa fa-trash'></span>
+                            </div>
+                        </article>
+                    </li>
+                <%} %>
+                </ul>
+            </section>
+
+        </main>
+
+        <script src="js/main.js"></script>
+    </body>
+</html>

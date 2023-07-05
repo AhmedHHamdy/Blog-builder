@@ -1,0 +1,53 @@
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+}
+
+ul li {
+    list-style-type: none;
+}
+
+section h2 {
+    border-bottom: 2px solid gray;
+}
+
+section article {
+    border: 1px solid black;
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 1%;
+    padding: 1%;
+}
+/* 
+section article img {
+    width: 0%;
+    height: 50vh;
+}
+ */
+
+section article h3 {
+    margin-top: 2%;
+}
+
+section article p {
+    margin-top: 0;
+}
+
+ul {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    padding: 0;
+}
+
+ul li {
+    margin: 2% 2% 0 0;
+}
+
